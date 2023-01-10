@@ -23,8 +23,8 @@ export default function ChatPage() {
     }
   };
   return (
-    <div className="fixed right-4 bottom-4 z-[9999]">
-      <div className={`h-[450px] w-72 bg-white shadow-xl rounded-xl relative grid place-items-center ${openChat ? 'scale-x-0 scale-y-0' : 'scale-x-1 scale-y-1'} transition-all duration-300 ease-in-out origin-bottom-right`}>
+    <>
+      <div className={`fixed right-4 bottom-32 z-[9999] h-[450px] w-72 bg-white shadow-xl rounded-xl grid place-items-center ${openChat ? 'scale-x-0 scale-y-0' : 'scale-x-1 scale-y-1'} transition-all duration-300 ease-in-out origin-bottom-right`}>
 
         <div className={`w-24 h-full absolute top-0 bg-white pt-3 px-2 text-center border rounded-md shadow-xl transition-all duration-300 delay-300 ease-in-out ${openChat ? 'opacity-0 -left-52' : 'opacity-1 -left-[96px]'}`}>
           <h2 className="text-xl font-medium mb-8 border px-2">Sellez</h2>
@@ -67,9 +67,9 @@ export default function ChatPage() {
         )}
       </div>
 
-      <div onClick={() => setOpenChat(!openChat)} className="w-20 rounded-full ml-auto mt-5 shadow-xl">
+      <div onClick={() => setOpenChat(!openChat)} className="w-20 rounded-full ml-auto mt-5 shadow-xl fixed right-4 bottom-4 z-[9999]">
         <img className="rounded-full shadow-xl" src={chatImage} alt="chat icon" />
       </div>
-    </div >
+    </ >
   );
 }
